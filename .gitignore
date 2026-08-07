@@ -1,0 +1,5 @@
+/AI_Radar/
+graphify-out/
+node_modules/
+.env
+*.log

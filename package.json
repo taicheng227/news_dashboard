@@ -1,0 +1,23 @@
+{
+  "name": "ai-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A small filesystem-first AI news brief and static dashboard.",
+  "scripts": {
+    "setup": "node --env-file-if-exists=.env scripts/setup.mjs",
+    "collect": "node --env-file-if-exists=.env scripts/collect.mjs",
+    "youtube": "node --env-file-if-exists=.env scripts/youtube.mjs",
+    "synthesize": "node --env-file-if-exists=.env scripts/synthesize.mjs",
+    "render": "node --env-file-if-exists=.env scripts/render.mjs",
+    "build": "node --env-file-if-exists=.env scripts/render.mjs",
+    "daily": "node --env-file-if-exists=.env scripts/daily.mjs",
+    "publish": "node --env-file-if-exists=.env scripts/publish.mjs",
+    "schedule:install": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-schedule.ps1",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
