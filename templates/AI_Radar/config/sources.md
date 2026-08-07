@@ -14,6 +14,10 @@ The collector reads this table. Keep each value on one line. `page` sources are 
 ## Reddit
 
 - r/codex
+- r/OpenAI
+- r/LocalLLM
+- r/Anthropic
+- r/ClaudeAI
 - r/ClaudeCode
 - Inspect the previous 48 hours.
 - Keep posts at score 50 or higher.

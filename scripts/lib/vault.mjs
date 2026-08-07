@@ -15,8 +15,7 @@ export async function ensureStructure() {
   const directories = [
     vaultPath('sources', 'official', 'openai'),
     vaultPath('sources', 'official', 'anthropic'),
-    vaultPath('sources', 'reddit', 'codex'),
-    vaultPath('sources', 'reddit', 'claudecode'),
+    vaultPath('sources', 'reddit'),
     vaultPath('sources', 'youtube'),
     vaultPath('briefs'),
     vaultPath('config'),

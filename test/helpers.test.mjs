@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { filterRedditComments, filterRedditPosts, flattenComments } from '../scripts/lib/reddit.mjs';
+import { filterRedditComments, filterRedditPosts, flattenComments, SUBREDDITS } from '../scripts/lib/reddit.mjs';
 import { markdownToHtml } from '../scripts/lib/markdown.mjs';
 import { identifierExists, serializeFrontmatter } from '../scripts/lib/vault.mjs';
 import { parseFeed } from '../scripts/lib/official.mjs';
@@ -18,6 +18,10 @@ test('Reddit keeps only recent 50+ posts and 20+ comments', () => {
   ];
   assert.deepEqual(filterRedditPosts(posts, now).map((post) => post.id), ['keep']);
   assert.deepEqual(filterRedditComments([{ score: 20, body: 'yes' }, { score: 19, body: 'no' }]).map((comment) => comment.body), ['yes']);
+});
+
+test('Reddit collection scope matches the declared six communities', () => {
+  assert.deepEqual(SUBREDDITS, ['codex', 'OpenAI', 'LocalLLM', 'Anthropic', 'ClaudeAI', 'ClaudeCode']);
 });
 
 test('nested Reddit comments are flattened', () => {

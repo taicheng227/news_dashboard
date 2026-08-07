@@ -6,7 +6,7 @@ import { vaultPath } from './paths.mjs';
 
 export const POST_THRESHOLD = 50;
 export const COMMENT_THRESHOLD = 20;
-export const SUBREDDITS = ['codex', 'ClaudeCode'];
+export const SUBREDDITS = ['codex', 'OpenAI', 'LocalLLM', 'Anthropic', 'ClaudeAI', 'ClaudeCode'];
 const USER_AGENT = 'AI-Radar/1.0 (personal news reader)';
 
 export function filterRedditPosts(posts, now = Date.now()) {
