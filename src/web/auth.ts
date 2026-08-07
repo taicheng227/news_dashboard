@@ -2,8 +2,8 @@ import { timingSafeEqual } from "node:crypto";
 import type { FastifyReply, FastifyRequest } from "fastify";
 
 export interface AuthSecrets {
-  dashboardUsername: string;
-  dashboardPassword: string;
+  dashboardUsername?: string;
+  dashboardPassword?: string;
   adminToken: string;
 }
 
@@ -44,11 +44,16 @@ export function createAccessGuard(secrets: AuthSecrets) {
       return reply.code(401).send({ error: "Unauthorized" });
     }
 
+    const { dashboardUsername, dashboardPassword } = secrets;
+    if (!dashboardUsername && !dashboardPassword) return;
+
     const credentials = basicCredentials(request.headers.authorization);
     if (
       credentials &&
-      secureEqual(credentials[0], secrets.dashboardUsername) &&
-      secureEqual(credentials[1], secrets.dashboardPassword)
+      dashboardUsername &&
+      dashboardPassword &&
+      secureEqual(credentials[0], dashboardUsername) &&
+      secureEqual(credentials[1], dashboardPassword)
     ) {
       return;
     }
