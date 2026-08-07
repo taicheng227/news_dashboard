@@ -24,7 +24,7 @@
     <section class="dashboard-grid">
       <aside class="status-panel" aria-label="Daily status">
         <p class="status-label">LAST REFRESHED</p>
-        <p class="refresh-time">1:04 pm</p>
+        <p class="refresh-time">7:50 pm</p>
         <div class="metric"><strong>3</strong><span>important<br>developments</span></div>
         <div class="metric"><strong>2</strong><span>worth<br>knowing</span></div>
         <div class="metric muted"><strong>0</strong><span>Reddit posts<br>filtered</span></div>
@@ -32,23 +32,23 @@
       </aside>
       <article class="brief">
         <h2>AI Brief — 7 August 2026</h2>
-<p>5 things worth knowing. 0 Reddit posts ignored.</p>
+<p>5 things worth knowing from the past three weeks. Reddit could not be reliably evaluated because approved API credentials are not yet available.</p>
 <h3>Important</h3>
-<h4>Codex CLI 0.147.0 adds portable plugins and reviewed approvals</h4>
-<p><strong>Official.</strong> The release adds portable Agent Plugins with catalog search, <code>--approve-for-me</code> for automatically reviewed approvals, persistent transcript sections, Cursor-managed skill imports, and opt-in MCP 2026-07-28 support. Security fixes cover secret redaction, project trust, authentication enforcement, and plugin isolation. The deprecated <code>codex exec --full-auto</code> flag is gone; use <code>--sandbox workspace-write</code>. <a href="https://developers.openai.com/codex/changelog" rel="noreferrer">Changelog</a></p>
-<h4>GPT-5.6 Sol was updated in ChatGPT</h4>
-<p><strong>Official.</strong> OpenAI claims better accuracy and consistency, while expanding free-user access to GPT-5.6 Luna and offering unlimited everyday Luna chats. The supplied announcement contains no benchmarks or detailed behavioral notes, so treat the Sol improvement as confirmed but unquantified. <a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt" rel="noreferrer">Announcement</a></p>
-<h4>Claude Code 2.1.224 expands multi-agent operation</h4>
-<p><strong>Official.</strong> Claude Code now supports cross-session <code>SendMessage</code> and <code>ListAgents</code> across machines on macOS and Linux, and removes the 200-subagent-per-session cap while retaining concurrency and depth limits. It also adds Team/Enterprise self-hosted runners and fixes permission bypasses, failed-message reporting, cross-project session collisions, and compaction scrollback. Consented feedback uploads may now include the system prompt, tool definitions, and model settings after redaction. <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md" rel="noreferrer">Changelog</a></p>
+<h4>Claude Opus 5 is a substantial agentic-coding upgrade</h4>
+<p><strong>Official.</strong> Released July 24, Opus 5 targets complex agentic coding and long-horizon work with a 1M-token context window, up to 128k output tokens, and thinking enabled by default at the same $5/$25 per-million-token price as Opus 4.8. It adds mid-conversation tool changes, a lower 512-token prompt-cache minimum, and stronger multi-agent coordination. Migration is not completely frictionless: disabling thinking at <code>xhigh</code> or <code>max</code> returns a 400 error. <a href="https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5" rel="noreferrer">What’s new in Claude Opus 5</a></p>
+<h4>Codex CLI 0.147.0 makes plugins and long-running work more portable</h4>
+<p><strong>Official.</strong> The August 7 release adds portable Agent Plugins with multi-catalog search, persistent manually ordered conversation sections, <code>--approve-for-me</code> for automatically reviewed approvals, Cursor skill imports, and opt-in MCP 2026-07-28 support. It also hardens plugin isolation, local-project trust, secret redaction, and Windows process handling. The deprecated <code>codex exec --full-auto</code> flag is removed; use <code>--sandbox workspace-write</code>. <a href="https://developers.openai.com/codex/changelog" rel="noreferrer">Codex changelog</a></p>
+<h4>Claude Code 2.1.224 expands agents beyond one session or machine</h4>
+<p><strong>Official.</strong> The August 7 release adds Team and Enterprise self-hosted runners, cross-session <code>SendMessage</code>, and <code>ListAgents</code> discovery across machines on macOS and Linux. It removes the 200-subagent-per-session spawn cap while retaining concurrency and nesting limits, and adds safer credential masking and approval handling. The practical shift is toward durable, distributed agent teams rather than isolated terminal sessions. <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.224" rel="noreferrer">Claude Code 2.1.224</a></p>
 <h3>Worth knowing</h3>
-<h4>Anthropic adds inference hooks for enterprise governance</h4>
-<p><strong>Official.</strong> Enterprise organizations can route governed prompts from Claude, Cowork, and Claude Code through an external security server for an allow-or-deny decision before inference. Requests are signed, failure behavior is configurable, and denials enter the compliance Activity Feed. Beta and enterprise-only. <a href="https://platform.claude.com/docs/en/release-notes/overview" rel="noreferrer">Release notes</a></p>
-<h4>Claude Opus 4.1 is now retired</h4>
-<p><strong>Official.</strong> API requests to <code>claude-opus-4-1-20250805</code> now fail. Any remaining integrations must migrate, with Anthropic recommending Opus 5. <a href="https://platform.claude.com/docs/en/release-notes/overview" rel="noreferrer">Release notes</a></p>
+<h4>GPT-5.6 changed in quality, price, and recommended defaults</h4>
+<p><strong>Official.</strong> OpenAI says GPT-5.6 Sol became more accurate and consistent on August 6, but published no supporting benchmarks, so the size of the improvement remains unquantified. Separately, Terra became 20% cheaper and Luna 80% cheaper; Sol now powers eligible hosted Codex code review and QA, and ChatGPT-authenticated Codex users must move from GPT-5.4/5.4 mini to Terra/Luna before their August 31 retirement. <a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt" rel="noreferrer">Sol update</a> · <a href="https://learn.chatgpt.com/docs/whats-new.md" rel="noreferrer">OpenAI weekly digest</a></p>
+<h4>Codex desktop gained a more unified research-and-review workflow</h4>
+<p><strong>Official.</strong> Over July 20–31, local projects gained multiple folders with a designated primary folder, combined diff review across repositories, browser-history and Google search in the built-in browser, richer Chrome-extension context, and an Activity view for work needing attention. Together these changes reduce context switching for multi-repository implementation and web-backed research. <a href="https://learn.chatgpt.com/docs/whats-new.md" rel="noreferrer">OpenAI weekly digest</a></p>
 <h3>Community findings</h3>
-<p>No community sources or unresolved community claims were included today.</p>
+<p>The Reddit benchmark could not be reliably checked because approved Reddit API credentials are not yet available. No scraped or unverified community claims were substituted.</p>
 <h3>From YouTube</h3>
-<p>No YouTube sources were included today.</p>
+<p>No new selected transcripts were included.</p>
 <h3>Nothing else requires your attention</h3>
 <p>You&#39;re caught up.</p>
       </article>
