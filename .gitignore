@@ -1,5 +1,13 @@
-/AI_Radar/
 graphify-out/
+/AI_Radar/
 node_modules/
 .env
 *.log
+dist/
+data/
+tmp/brief-run/*
+!tmp/brief-run/.gitkeep
+tmp/smoke/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

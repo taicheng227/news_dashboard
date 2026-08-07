@@ -1,0 +1,3 @@
+<header class="page-header"><p class="eyebrow"><%= it.newsletter.newsletter_date %> · VERSION <%= it.newsletter.version %></p><h1><%= it.newsletter.title %></h1><p><%= it.newsletter.dek %></p><p class="muted">Published <%= it.formatDateTime(it.newsletter.published_at) %></p></header>
+<article class="rendered-newsletter"><%~ it.newsletter.html %></article>
+<nav class="version-links" aria-label="Edition versions"><span>Versions:</span><% for (const version of it.versions) { %> <a href="/newsletters/<%= it.newsletter.newsletter_date %>/versions/<%= version.version %>">v<%= version.version %></a><% } %></nav>

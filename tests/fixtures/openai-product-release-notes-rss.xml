@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title><![CDATA[OpenAI Product Release Notes]]></title>
+    <link>https://openai.com/products/release-notes/</link>
+    <item>
+      <title><![CDATA[Projects can now share connected sources]]></title>
+      <description><![CDATA[Projects gained shared connected sources and clearer permission controls.]]></description>
+      <content:encoded><![CDATA[<p>Projects can now share connected sources across a workspace.</p><ul><li>Admins can control access.</li><li>Members see clearer permission details.</li></ul>]]></content:encoded>
+      <link>https://openai.com/products/release-notes/#projects-connected-sources</link>
+      <guid isPermaLink="false">openai-product-notes-2026-08-05-projects</guid>
+      <category><![CDATA[ChatGPT]]></category>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[ChatGPT Work adds export controls]]></title>
+      <description><![CDATA[Workspace administrators can configure more granular export controls.]]></description>
+      <link>https://openai.com/products/release-notes/#work-export-controls</link>
+      <guid isPermaLink="false">openai-product-notes-2026-07-23-exports</guid>
+      <category><![CDATA[ChatGPT Work]]></category>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Older product note outside the backfill]]></title>
+      <description><![CDATA[This fixture entry must not be discovered on the initial run.]]></description>
+      <guid isPermaLink="false">openai-product-notes-2026-06-01-old</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

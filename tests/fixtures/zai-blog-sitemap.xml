@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://z.ai/company</loc>
+    <lastmod>2026-08-07T12:58:54.019Z</lastmod>
+  </url>
+  <url>
+    <loc>https://z.ai/blog/glm-5.2?id=tracking-copy</loc>
+    <lastmod>2026-08-06T12:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://z.ai/blog/zcube</loc>
+    <lastmod>2026-08-05T09:30:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://z.ai/blog/assets/src.js</loc>
+    <lastmod>2026-08-07T12:58:54.019Z</lastmod>
+  </url>
+  <url>
+    <loc>https://example.com/blog/not-zai</loc>
+    <lastmod>2026-08-07T12:58:54.019Z</lastmod>
+  </url>
+</urlset>

@@ -1,0 +1,7 @@
+<header class="page-header"><p class="eyebrow">PERMANENT RECORD</p><h1>Newsletter archive</h1><p>Every published edition, newest first. Historical versions are never overwritten.</p></header>
+<section class="archive-list">
+<% if (!it.newsletters.length) { %><p class="empty-state">No editions yet.</p><% } %>
+<% for (const edition of it.newsletters) { %>
+  <article><div><p><%= it.formatDate(edition.newsletter_date) %> · version <%= edition.version %></p><h2><a href="/newsletters/<%= edition.newsletter_date %>"><%= edition.title %></a></h2><p><%= edition.dek %></p></div><span class="pill"><%= edition.entry_count %> stories</span></article>
+<% } %>
+</section>

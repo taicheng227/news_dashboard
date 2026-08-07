@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "request_id": "fixture-request",
+  "data": {
+    "articles": [
+      {
+        "id": "4b317389-054b-4650-8df9-9ae89c3b6b10",
+        "type": "qwen_ai",
+        "path": "qwen-image-3-0",
+        "title": "Qwen-Image-3.0: Native Multimodal Creation",
+        "content": "<!doctype html><html><head><title>Qwen-Image-3.0: Native Multimodal Creation</title><meta name=\"author\" content=\"Qwen Team\"></head><body><main><article><h1>Qwen-Image-3.0</h1><p>Qwen-Image-3.0 introduces native image generation and editing in one model. It improves prompt following, text rendering, and multi-image consistency for practical creative workflows.</p><p>The release is available through Qwen services and includes deployment guidance for developers evaluating production use.</p></article></main></body></html>",
+        "extra": {
+          "date": "2026-07-21T13:00:00+08:00",
+          "author": "Qwen Team",
+          "description": "Native image generation and editing in one model.",
+          "tags": ["Release", "Multimodal"]
+        }
+      },
+      {
+        "id": "294d676e-8ca5-40db-a8f8-fd115bb8b623",
+        "type": "qwen_ai",
+        "path": "/research/qwen3-coder-next",
+        "title": "Qwen3-Coder-Next: More Reliable Agents",
+        "content": "<!doctype html><html><body><article><h1>Qwen3-Coder-Next</h1><p>Qwen3-Coder-Next improves repository-scale coding, tool selection, and recovery from failed actions. The update targets longer software-engineering tasks and more predictable agent behavior.</p></article></body></html>",
+        "extra": {
+          "date": "2026-07-18T09:30:00Z",
+          "author": "Qwen Team",
+          "description": "A coding-model update focused on reliable agent workflows.",
+          "tags": ["Open-Source", "Coding"]
+        }
+      },
+      {
+        "id": "old-fixture-item",
+        "type": "qwen_ai",
+        "path": "old-research-item",
+        "title": "An Older Research Item",
+        "content": "<html><body><article><h1>Older item</h1><p>This item exists only to prove that the static parser applies the configured backfill boundary.</p></article></body></html>",
+        "extra": {
+          "date": "2026-06-01T00:00:00Z",
+          "author": "Qwen Team",
+          "description": "Outside the test window.",
+          "tags": ["Research"]
+        }
+      }
+    ]
+  }
+}

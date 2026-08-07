@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Radar Newsletter"
+  short_description: "Turn AI Radar candidates into a daily brief"
+  default_prompt: "Use $ai-radar-newsletter to assess the exported candidates and generate today's structured AI Radar edition."
