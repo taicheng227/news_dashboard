@@ -1,0 +1,9 @@
+<header class="page-header"><p class="eyebrow">SYSTEM HEALTH</p><h1>AI Radar status</h1><p>Collection, analysis, and publication state from the canonical database.</p></header>
+<section class="status-grid">
+  <article><p>Latest successful collection</p><strong><%= it.formatDateTime(it.status.latestSuccessfulCollection?.completed_at) %></strong></article>
+  <article><p>Latest partial or failed collection</p><strong><%= it.formatDateTime(it.status.latestProblemCollection?.completed_at) %></strong></article>
+  <article><p>Pending candidates</p><strong><%= it.status.pendingCandidates %></strong></article>
+  <article><p>Latest Codex run</p><strong><%= it.status.latestAnalysisRun ? it.status.latestAnalysisRun.status + " · " + it.formatDateTime(it.status.latestAnalysisRun.completed_at || it.status.latestAnalysisRun.started_at) : "Not yet" %></strong></article>
+  <article><p>Latest newsletter</p><strong><%= it.status.latestNewsletter ? it.status.latestNewsletter.newsletter_date + " · v" + it.status.latestNewsletter.version : "Not yet" %></strong></article>
+</section>
+<section class="health-table"><h2>Source health</h2><table><thead><tr><th>Source</th><th>Last success</th><th>Last checked</th><th>Status</th></tr></thead><tbody><% for (const source of it.status.sources) { %><tr><td><%= source.name %></td><td><%= it.formatDateTime(source.last_success_at) %></td><td><%= it.formatDateTime(source.last_checked_at) %></td><td><%= source.last_error || "Healthy" %></td></tr><% } %></tbody></table></section>

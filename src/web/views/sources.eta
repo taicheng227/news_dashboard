@@ -1,0 +1,16 @@
+<header class="page-header"><p class="eyebrow">SOURCE HISTORY</p><h1>Stored items</h1><p>Extracted source history without exposing raw pages or full transcripts.</p></header>
+<form class="filters" method="get">
+  <label>Provider <select name="provider"><option value="">All</option><% for (const value of it.filters.providers) { %><option value="<%= value %>"<% if (it.query.provider === value) { %> selected<% } %>><%= value %></option><% } %></select></label>
+  <label>Type <select name="kind"><option value="">All</option><% for (const value of it.filters.kinds) { %><option value="<%= value %>"<% if (it.query.kind === value) { %> selected<% } %>><%= value %></option><% } %></select></label>
+  <label>Disposition <select name="disposition"><option value="">All</option><% for (const value of it.filters.dispositions) { %><option value="<%= value %>"<% if (it.query.disposition === value) { %> selected<% } %>><%= value %></option><% } %></select></label>
+  <label>Since <input type="date" name="since" value="<%= it.query.since %>"></label><button type="submit">Filter</button>
+</form>
+<section class="source-list">
+<% if (!it.items.length) { %><p class="empty-state">No matching stored items.</p><% } %>
+<% for (const item of it.items) { %><article><div><p class="source-meta"><span><%= item.provider %></span> · <%= item.kind %> · <%= it.formatDate(item.published_at) %></p><h2><% if (item.canonical_url) { %><a href="<%= item.canonical_url %>" rel="noreferrer"><%= item.title %></a><% } else { %><%= item.title %><% } %></h2><p><%= item.assessment_summary || "Not yet assessed." %></p></div><div><span class="pill"><%= item.disposition || "PENDING" %></span><p>Captured <%= it.formatDate(item.captured_at) %></p></div></article><% } %>
+</section>
+<nav class="pagination" aria-label="Source history pages">
+  <% if (it.pagination.previousUrl) { %><a href="<%= it.pagination.previousUrl %>">Newer</a><% } else { %><span></span><% } %>
+  <span>Page <%= it.pagination.page %></span>
+  <% if (it.pagination.nextUrl) { %><a href="<%= it.pagination.nextUrl %>">Older</a><% } else { %><span></span><% } %>
+</nav>

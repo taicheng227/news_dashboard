@@ -1,0 +1,144 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "editionDate",
+    "title",
+    "dek",
+    "quietDay",
+    "assessments",
+    "entries",
+    "closing"
+  ],
+  "properties": {
+    "editionDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "dek": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "quietDay": {
+      "type": "boolean"
+    },
+    "assessments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/assessment"
+      }
+    },
+    "entries": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    },
+    "closing": {
+      "type": "string",
+      "enum": ["You're caught up."]
+    }
+  },
+  "$defs": {
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "itemId",
+        "snapshotId",
+        "disposition",
+        "importance",
+        "category",
+        "confidence",
+        "summary",
+        "whyItMatters",
+        "keyPoints",
+        "caveats"
+      ],
+      "properties": {
+        "itemId": { "type": "string", "minLength": 1 },
+        "snapshotId": { "type": "string", "minLength": 1 },
+        "disposition": {
+          "type": "string",
+          "enum": ["INCLUDE", "WATCH", "ARCHIVE"]
+        },
+        "importance": {
+          "anyOf": [
+            { "type": "integer", "minimum": 1, "maximum": 5 },
+            { "type": "null" }
+          ]
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "PRODUCT_RELEASE",
+            "MODEL_RELEASE",
+            "CODING_AGENT",
+            "DEVELOPER_TOOL",
+            "AI_APPLICATION",
+            "RESEARCH",
+            "COMMENTARY",
+            "OTHER"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["HIGH", "MEDIUM", "LOW"]
+        },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "whyItMatters": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "keyPoints": {
+          "type": "array",
+          "maxItems": 8,
+          "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+        },
+        "caveats": {
+          "type": "array",
+          "maxItems": 5,
+          "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+        }
+      }
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section",
+        "rank",
+        "headline",
+        "sourceItemIds",
+        "summary",
+        "whyItMatters",
+        "caveats"
+      ],
+      "properties": {
+        "section": {
+          "type": "string",
+          "enum": ["IMPORTANT", "WORTH_KNOWING", "FROM_YOUTUBE", "WATCHLIST"]
+        },
+        "rank": { "type": "integer", "minimum": 1, "maximum": 8 },
+        "headline": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "sourceItemIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "whyItMatters": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "caveats": {
+          "type": "array",
+          "maxItems": 5,
+          "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+        }
+      }
+    }
+  }
+}

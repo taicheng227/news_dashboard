@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title><![CDATA[OpenAI News]]></title>
+    <link>https://openai.com/news</link>
+    <item>
+      <title><![CDATA[Codex adds durable background tasks]]></title>
+      <description><![CDATA[Codex can now keep longer software tasks running in the background and return structured results when work completes.]]></description>
+      <link>https://openai.com/index/codex-background-tasks?utm_source=rss</link>
+      <guid isPermaLink="true">https://openai.com/index/codex-background-tasks</guid>
+      <category><![CDATA[Product]]></category>
+      <dc:creator><![CDATA[OpenAI]]></dc:creator>
+      <pubDate>Thu, 06 Aug 2026 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[New tools for educators]]></title>
+      <description><![CDATA[OpenAI introduces practical teaching and learning workflows for educators and students.]]></description>
+      <link>https://openai.com/index/new-tools-for-educators</link>
+      <guid isPermaLink="true">https://openai.com/index/new-tools-for-educators</guid>
+      <category><![CDATA[Product]]></category>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Older announcement outside the backfill]]></title>
+      <description><![CDATA[This fixture entry must not be discovered.]]></description>
+      <link>https://openai.com/index/older-announcement</link>
+      <guid isPermaLink="true">https://openai.com/index/older-announcement</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

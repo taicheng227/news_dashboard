@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A finite daily briefing on the AI developments worth your attention.">
+  <title><%= it.pageTitle ? it.pageTitle + " · " : "" %>AI Radar</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="/"><span class="brand-dot"></span>AI RADAR</a>
+    <nav aria-label="Primary">
+      <a href="/">Latest</a>
+      <a href="/archive">Archive</a>
+      <a href="/sources">Sources</a>
+      <a href="/status">Status</a>
+    </nav>
+    <p>One careful scan · once a day</p>
+  </header>
+  <main>
+    <%~ it.body %>
+  </main>
+  <footer><span>AI RADAR</span><span>Finite by design.</span></footer>
+</body>
+</html>
