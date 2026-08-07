@@ -88,10 +88,12 @@ Set on the web service:
 DATABASE_PATH=/data/ai-radar.sqlite
 PORT=3000
 HOST=0.0.0.0
-DASHBOARD_USERNAME=...
-DASHBOARD_PASSWORD=...
 AI_RADAR_ADMIN_TOKEN=...
 ```
+
+The browser-facing dashboard is public when `DASHBOARD_USERNAME` and
+`DASHBOARD_PASSWORD` are omitted. Set both variables to enable HTTP Basic
+authentication. Internal routes always require `AI_RADAR_ADMIN_TOKEN`.
 
 The Docker image contains Node.js 22 and `yt-dlp`. Startup runs numbered migrations before Fastify listens, `/health` is the Railway health check, and SIGTERM closes SQLite cleanly.
 

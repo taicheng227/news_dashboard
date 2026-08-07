@@ -342,3 +342,46 @@ test("Fastify renders the stored homepage and enforces route-specific authentica
     await cleanup(fixture);
   }
 });
+
+test("Fastify can expose the dashboard publicly while internal routes stay protected", async () => {
+  const fixture = await fixtureDatabase();
+  const env = loadEnv({
+    NODE_ENV: "production",
+    DATABASE_PATH: path.join(fixture.directory, "unused.sqlite"),
+    AI_RADAR_ADMIN_TOKEN: "separate-admin-token",
+  });
+  const app = await buildApp({ env, database: fixture.database, logger: false });
+  try {
+    assert.equal((await app.inject({ method: "GET", url: "/" })).statusCode, 200);
+    assert.equal(
+      (await app.inject({ method: "GET", url: "/internal/status" })).statusCode,
+      401,
+    );
+    assert.equal(
+      (
+        await app.inject({
+          method: "GET",
+          url: "/internal/status",
+          headers: { authorization: "Bearer separate-admin-token" },
+        })
+      ).statusCode,
+      200,
+    );
+  } finally {
+    await app.close();
+    await cleanup(fixture);
+  }
+});
+
+test("dashboard Basic auth variables must be configured as a pair", () => {
+  assert.throws(
+    () =>
+      loadEnv({
+        NODE_ENV: "production",
+        DATABASE_PATH: "./data/test.sqlite",
+        DASHBOARD_USERNAME: "radar",
+        AI_RADAR_ADMIN_TOKEN: "separate-admin-token",
+      }),
+    /must be set together/,
+  );
+});
